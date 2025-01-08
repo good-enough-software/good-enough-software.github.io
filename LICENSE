@@ -1,0 +1,33 @@
+Good Enough Software License (GESL)
+
+Preamble:
+The Good Enough Software License (GESL) ensures software governed by this license meets high standards in security and development while offering flexibility. Approvals for use, modification, or distribution are determined by a specialized Committee composed of:
+
+A Security Expert: Evaluates the software for compliance with security best practices.
+A Development Expert: Assesses the quality, maintainability, and functionality of the software.
+The Good Enough Officer (GEO): Holds the final authority to approve the software based on its practical adequacy, even if it doesn't meet all criteria, as long as it’s deemed “good enough.”
+
+To accommodate broader adoption, this license allows for a dual-licensing model, enabling companies to opt out of the "Good Enough" restrictions upon payment of an approved fee.
+
+Terms of the License:
+
+Grant of Use:
+
+Permission to use, modify, or distribute this software is granted solely to individuals or entities explicitly approved in writing by the Committee of the License (the "Committee").
+Prohibition:
+
+Any use, modification, or distribution of this software without prior written approval from the Committee is strictly prohibited unless converted to the "Not Good Enough License" as outlined in Section 5.
+
+Committee Structure and Role:
+
+The Committee consists of a Security Expert, a Development Expert, and the Good Enough Officer (GEO).
+Approval requires a majority decision from the Committee or a sole decision by the GEO if the product is deemed "good enough."
+
+Enforcement:
+
+Unauthorized use, modification, or distribution constitutes a violation of this license and may result in legal action under applicable copyright laws.
+
+Dual Licensing – Conversion to "Not Good Enough Software License (NGESL):
+
+Companies or entities may convert this license to a "Not Good Enough License", removing the Committee's restrictions, by paying a fee determined by the Committee.
+The amount of the fee will be set by the Committee and communicated in writing. Upon payment, the entity is granted unrestricted use, modification, and distribution rights under a separate agreement.

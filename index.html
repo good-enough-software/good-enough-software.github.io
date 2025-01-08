@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Enough Software License (GESL)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .approved-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .request-steps {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .committee {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .committee-member {
+            flex: 1;
+            min-width: 200px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Good Enough Software License (GESL)</h1>
+    
+    <p>The Good Enough Software License (GESL) is a unique licensing model that ensures software meets high standards in security and development while maintaining practical flexibility through the concept of "good enough" software.</p>
+
+    <h2>What Makes Software "Good Enough"?</h2>
+    <div class="license-explanation" style="background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0;">
+        <p>The GESL is built on the principle that software doesn't need to be perfect to be valuable and usable. Our specialized Committee evaluates software based on practical adequacy rather than theoretical perfection.</p>
+        
+        <h3>Key Principles:</h3>
+        <ul>
+            <li><strong>Security First:</strong> Software must meet essential security best practices</li>
+            <li><strong>Quality Standards:</strong> Code should be maintainable and functional</li>
+            <li><strong>Practical Adequacy:</strong> Focus on real-world usability over theoretical perfection</li>
+        </ul>
+    </div>
+
+    <h2>The Committee</h2>
+    <div class="committee">
+        <div class="committee-member">
+            <h3>Security Expert</h3>
+            <p>Evaluates software for compliance with security best practices and ensures basic security standards are met</p>
+        </div>
+        <div class="committee-member">
+            <h3>Development Expert</h3>
+            <p>Reviews code quality, maintainability, and functionality to ensure sustainable development practices</p>
+        </div>
+        <div class="committee-member">
+            <h3>Good Enough Officer (GEO)</h3>
+            <p>Makes final decisions based on practical adequacy, balancing perfection with practicality</p>
+        </div>
+    </div>
+
+    <h2>Licensing Options</h2>
+    <div class="licensing-options" style="background: #e9ecef; padding: 20px; border-radius: 5px; margin: 20px 0;">
+        <h3>Standard GESL</h3>
+        <p>Requires Committee approval for use, modification, or distribution. Ideal for organizations committed to maintaining high standards while embracing practical solutions.</p>
+
+        <h3>Dual Licensing - NGESL Option</h3>
+        <p>Organizations can convert to the "Not Good Enough License" (NGESL) through a fee-based model, removing Committee restrictions while maintaining access to the software. This option provides flexibility for organizations with different needs or constraints.</p>
+    </div>
+
+    <h2>Approved Organizations</h2>
+    <div class="approved-list">
+        <p>View the complete list of <a href="organizations.html">approved organizations</a> that have been granted the GESL license.</p>
+        <p>To add your organization to this list, follow the steps below to submit a Pull Request.</p>
+    </div>
+
+    <h2>How to Request the License</h2>
+    <div class="request-steps">
+        <ol>
+            <li>Fork this repository</li>
+            <li>Add your organization to organizations.html</li>
+            <li>Create a Pull Request with the following information:
+                <ul>
+                    <li>Your organization name</li>
+                    <li>Project GitHub page URL</li>
+                    <li>Explanation of why your project should be granted the GESL</li>
+                </ul>
+            </li>
+            <li>The Committee will review your request and provide a decision</li>
+        </ol>
+    </div>
+
+    <footer>
+        <p>For the full license text, please see the <a href="LICENSE">LICENSE</a> file.</p>
+    </footer>
+
+    <script>
+        fetch('approved-organizations.json')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.querySelector('#approved-orgs tbody');
+                data.approved_organizations.forEach(org => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${org.organization}</td>
+                        <td><a href="${org.project}" target="_blank">${org.project}</a></td>
+                        <td>${org.approval_date}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error loading approved organizations:', error));
+    </script>
+</body>
+</html>
